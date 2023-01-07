@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/weather.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="weather">
+        <div class="weather_form">
+            <form id="weather_form">
+                <select name="city">
+                    <option value hidden selected disabled>
+                        ---Select City---
+                    </option>
+                    <option value="Rehovot">Rehovot</option>
+                    <option value="TelAviv">Tel Aviv</option>
+                    <option value="Haifa">Haifa</option>
+                </select>
+                <input id="date_from_field" type="date" name="date_from" min="2022-12-19" max="2023-01-03">
+                <input id="date_to_field" type="date" name="date_to" min="2022-12-19" max="2023-01-03">
+                <input type="number" name="hour_from">
+                <input type="number" name="hour_to">
+                <p id="hours_error"></p>
+                <button type="submit">Search</button>
+                <button type="reset">Reset</button>
+            </form>
+        </div>
+        <div class="temperatures_list">
+            <button>Show Temperatures List</button>
+            <p id="results_list"></p>
+        </div>
+</section>
+    <script src="src/main.js" type="module"></script>
+</body>
+</html>
